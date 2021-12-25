@@ -31,12 +31,11 @@ if "checkForUpdatesWhenLaunched = True" in settings:
     headers = {'Accept-Encoding': 'identity'}
     rq = requests.get("https://raw.githubusercontent.com/Code1Tech/webcam-searcher/main/README.md",headers=headers)
     content = rq.text
-    if "# webcam-searcher" in content:
-        if "v1.0.0" in content:
-            input(Fore.GREEN + "No updates are required,\nyou are using the latest version of wcs.py.\nPress enter to continue.")
-            os.system("cls")
-        else:
-            print(Fore.YELLOW + "There is a new update available for wcs.py, you can download it at the GitHub page.\nhttps://github.com/Code1Tech/webcam-searcher\n\n")
+    if "# webcam-searcher v1.0.0" in content:
+        input(Fore.GREEN + "No updates are required,\nyou are using the latest version of wcs.py.\nPress enter to continue.")
+        os.system("cls")
+    elif not "# webcam-searcher v1.0.0" in content:
+        print(Fore.YELLOW + "There is a new update available for wcs.py, you can download it at the GitHub page.\nhttps://github.com/Code1Tech/webcam-searcher\n\n")
     else:
         print(Fore.RED + "An error has occured while finding the latest update.\n\n")
 elif "checkForUpdatesWhenLaunched = False" in settings:
