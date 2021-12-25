@@ -28,8 +28,9 @@ _ = open("settings.txt") # gives error in vs code, see "wcs_vscode.py" via wcs_d
 settings = _.read()
 _.close()
 if "checkForUpdatesWhenLaunched = True" in settings:
-    rq = requests.get("https://raw.githubusercontent.com/Code1Tech/webcam-searcher/main/README.md")
-    content = rq.content
+    headers = {'Accept-Encoding': 'identity'}
+    rq = requests.get("https://raw.githubusercontent.com/Code1Tech/webcam-searcher/main/README.md",headers=headers)
+    content = rq.text
     if "# webcam-searcher" in content:
         if "v1.0.0" in content:
             input(Fore.GREEN + "No updates are required,\nyou are using the latest version of wcs.py.\nPress enter to continue.")
