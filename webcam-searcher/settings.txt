@@ -1,0 +1,2 @@
+checkForUpdatesWhenLaunched = True
+promptToEnableAU = True
