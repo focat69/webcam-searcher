@@ -1,2 +1,0 @@
-checkForUpdatesWhenLaunched = False
-promptToEnableAU = True
