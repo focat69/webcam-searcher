@@ -1,5 +1,6 @@
 # webcam-searcher v1.0.0
-Searches through google using **PASSIVE** recon (not illegal) and returns results a list of webcams.
+Searches through google using **PASSIVE** recon (not illegal) and returns results a list of webcams.  
+This program is intended to be used on Windows 10.
 
 |Information         |Result                                       |
 |:----------------|:---------------------------------------------|
